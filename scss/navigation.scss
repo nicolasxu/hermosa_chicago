@@ -1,0 +1,57 @@
+.app-nav {
+	float: left;
+	height: 100vh;
+	width: 320px;
+	background-color: #28aadc;
+	color: white;
+	position: relative;
+	.logo {
+
+		position: absolute;
+		left: 50%; 
+		transform: translate(-50%, 0);
+		top: 4em;
+		img {
+			width: 9em;;
+			height: auto;
+		}
+	}
+	.title {
+			margin-top: 7em;
+			font-size: 2em;
+			margin-left: 2em;
+			color: white; 
+	}
+	.menu-list {
+		margin-top: 4em; 
+		padding-left: 0;
+	}
+	.menu-item {
+		list-style: none;
+		
+
+		a {
+			display: block;
+			font-size: 20px; 
+			line-height: 2em;
+			transition: all 0.4s;
+			padding-left: 1.4em;
+
+			&:hover {
+				color: white; 
+				text-decoration: none;
+				background-color: rgba(105, 105, 115, 0.27);
+
+			}
+		}
+	}
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (min-width : 480px) {
+
+	}
+
+	/* Medium Devices, Desktops */
+	@media only screen and (min-width : 992px) {
+
+	}
+}

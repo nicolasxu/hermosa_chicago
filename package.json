@@ -1,0 +1,41 @@
+{
+  "name": "hermosa_community",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --content-base ./dist --hot --progress --colors"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "bootstrap-loader": "^1.0.10",
+    "bootstrap-sass": "^3.3.6",
+    "crossroads": "^0.12.2",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "*",
+    "hasher": "^1.2.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "*",
+    "imports-loader": "^0.6.5",
+    "jquery": "^3.1.0",
+    "lodash": "^4.13.1",
+    "node-sass": "^3.8.0",
+    "raw-loader": "*",
+    "resolve-url-loader": "^1.4.4",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  }
+}

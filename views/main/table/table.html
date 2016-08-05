@@ -1,0 +1,88 @@
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#residential" aria-controls="residential" role="tab" data-toggle="tab">Residential</a></li>
+    <li role="presentation"><a href="#commercial" aria-controls="commercial" role="tab" data-toggle="tab">Commercial</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="residential">
+      <h4>
+        Residential KWh & Therm data
+      </h4>
+      <div class="kwh_therm">
+        <table class="table">
+          <caption>KWh & Therm</caption>
+          <thead>
+            <tr>
+              <th> #</th>
+              <th>Total KWh</th>
+              <th>KWh Std.</th>
+              <th>Total Therms</th>
+              <th>Therm Std.</th>
+              <th>People #</th>
+              <th>Unit #</th>
+              <th>Population #</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% _.each(residentials, function(res, index){  %>
+              <tr>
+                <td> <%- index %> </td>
+                <td> <%- formatInt(res.total_kwh) %> </td>
+                <td> <%- formatFloat(res.kwh_standard_deviation_2010) %> </td>
+                <td> <%- formatInt(res.total_therms) %> </td>
+                <td> <%- formatFloat(res.therm_standard_deviation_2010) %> </td>
+                <td> <%- res.peoples_account %> </td>
+                <td> <%- res.total_units %> </td>
+                <td> <%- formatInt(res.total_population) %> </td>
+              </tr>
+            <%  } ) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="commercial">
+      <h4>
+        Commercial table (kwh, thermo)
+      </h4>
+      <div class="kwh_therm">
+        <table class="table">
+          <caption>KWh & Therm</caption>
+          <thead>
+            <tr>
+              <th> #</th>
+              <th>Total KWh</th>
+              <th>KWh Std.</th>
+              <th>Total Therms</th>
+              <th>Therm Std.</th>
+              <th>People #</th>
+              <th>Unit #</th>
+              <th>Population #</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% _.each(commercials, function(res, index){  %>
+              <tr>
+                <td> <%- index %> </td>
+                <td> <%= formatInt(res.total_kwh) %> </td>
+                <td> <%= formatFloat(res.kwh_standard_deviation_2010) %> </td>
+                <td> <%= formatInt(res.total_therms) %> </td>
+                <td> <%- formatFloat(res.therm_standard_deviation_2010) %> </td>
+                <td> <%- res.peoples_account %> </td>
+                <td> <%- res.total_units %> </td>
+                <td> <%- formatInt(res.total_population) %> </td>
+              </tr>
+            <%  } ) %>
+          </tbody>
+        </table>
+      </div>
+   
+
+    </div>
+
+  </div>
+
+</div>
