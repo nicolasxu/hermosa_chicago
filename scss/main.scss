@@ -3,23 +3,24 @@
 	position: relative;
 	overflow: hidden; // create a block formating context
 	height: 100vh;
-	padding: 1em;
+	padding: 1em 0 1em 1em;
 	header {
 		height: 65px;
-		font-size: 2em; 
+		font-size: 185%;
 	}
-
-	/* Extra Small Devices, Phones */ 
-	@media only screen and (min-width : 480px) {
-
-	}
-
 	/* Medium Devices, Desktops */
-	@media only screen and (min-width : 992px) {
-
+	@media only screen and (max-width : 992px) {
+		margin-left: 200px;
+	}
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px) {
+		margin-left: 0;
+		height: auto;
 	}
 
-	
+
+
+
 
 
 }

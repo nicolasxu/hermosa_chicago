@@ -17,11 +17,11 @@
           <caption>KWh & Therm</caption>
           <thead>
             <tr>
-              <th> #</th>
+              <th class="index"> #</th>
               <th>Total KWh</th>
-              <th>KWh Std.</th>
+              <th class="std">KWh Std.</th>
               <th>Total Therms</th>
-              <th>Therm Std.</th>
+              <th class="std">Therm Std.</th>
               <th>People #</th>
               <th>Unit #</th>
               <th>Population #</th>
@@ -30,11 +30,11 @@
           <tbody>
             <% _.each(residentials, function(res, index){  %>
               <tr>
-                <td> <%- index %> </td>
+                <td class="index"> <%- index %> </td>
                 <td> <%- formatInt(res.total_kwh) %> </td>
-                <td> <%- formatFloat(res.kwh_standard_deviation_2010) %> </td>
+                <td class="std"> <%- formatFloat(res.kwh_standard_deviation_2010) %> </td>
                 <td> <%- formatInt(res.total_therms) %> </td>
-                <td> <%- formatFloat(res.therm_standard_deviation_2010) %> </td>
+                <td class="std"> <%- formatFloat(res.therm_standard_deviation_2010) %> </td>
                 <td> <%- res.peoples_account %> </td>
                 <td> <%- res.total_units %> </td>
                 <td> <%- formatInt(res.total_population) %> </td>
@@ -46,18 +46,18 @@
     </div>
     <div role="tabpanel" class="tab-pane" id="commercial">
       <h4>
-        Commercial table (kwh, thermo)
+        Commercial kwh & thermo data
       </h4>
       <div class="kwh_therm">
         <table class="table">
           <caption>KWh & Therm</caption>
           <thead>
             <tr>
-              <th> #</th>
+              <th class="index"> #</th>
               <th>Total KWh</th>
-              <th>KWh Std.</th>
+              <th class="std">KWh Std.</th>
               <th>Total Therms</th>
-              <th>Therm Std.</th>
+              <th class="std">Therm Std.</th>
               <th>People #</th>
               <th>Unit #</th>
               <th>Population #</th>
@@ -66,11 +66,11 @@
           <tbody>
             <% _.each(commercials, function(res, index){  %>
               <tr>
-                <td> <%- index %> </td>
+                <td class="index"> <%- index %> </td>
                 <td> <%= formatInt(res.total_kwh) %> </td>
-                <td> <%= formatFloat(res.kwh_standard_deviation_2010) %> </td>
+                <td class="std"> <%= formatFloat(res.kwh_standard_deviation_2010) %> </td>
                 <td> <%= formatInt(res.total_therms) %> </td>
-                <td> <%- formatFloat(res.therm_standard_deviation_2010) %> </td>
+                <td class="std"> <%- formatFloat(res.therm_standard_deviation_2010) %> </td>
                 <td> <%- res.peoples_account %> </td>
                 <td> <%- res.total_units %> </td>
                 <td> <%- formatInt(res.total_population) %> </td>

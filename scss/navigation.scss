@@ -45,13 +45,40 @@
 			}
 		}
 	}
-	/* Extra Small Devices, Phones */ 
-	@media only screen and (min-width : 480px) {
-
-	}
-
 	/* Medium Devices, Desktops */
-	@media only screen and (min-width : 992px) {
+	@media only screen and (max-width : 992px) {
+		width: 200px;
+		height: 100vh; 
+		.logo {
+			img {
+				width: 6em;
+			}
+		}
+		.title {
+			font-size: 1.5em;
+			margin-left: 1.5em;
+		}
+	}
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px) {
+		display: block;
+		height: auto;
+		float: none;
+		width: 100%;
+		.logo {
+			display: none;
+		}
+		.title {
+			font-size: 1.6em;
+			margin-top: 0;
+			padding-top: 0.3em;
+		}
+		.menu-list {
+			margin-top: 0;
+		}
 
 	}
+
+
 }

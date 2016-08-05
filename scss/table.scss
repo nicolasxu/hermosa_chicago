@@ -1,15 +1,31 @@
 .kwh_therm {
-	display: inline-block;
+	display: block;
 	height: 88vh;
 	overflow: scroll;
-	width: 98%;
-	padding-right: 1em;
+	width: 100%;
+	padding-right: 0;
 	padding-bottom: 1em;
 
 	th, td {
 		text-align: right; 
 	}
 
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) {
+		.std {
+			display: none; 
+		}
+	}
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px) {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		.index {
+			display: none; 
+		}
+	}
 }
 // .therm {
 // 	display: inline-block;
