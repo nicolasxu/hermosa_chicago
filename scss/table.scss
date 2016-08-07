@@ -12,7 +12,7 @@
 
 	/* Medium Devices, Desktops */
 	@media only screen and (max-width : 992px) {
-		.std {
+		.std, .population {
 			display: none; 
 		}
 	}
@@ -27,8 +27,3 @@
 		}
 	}
 }
-// .therm {
-// 	display: inline-block;
-// 	width: 45%;
-// 	overflow: hidden;
-// }

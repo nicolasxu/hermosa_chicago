@@ -25,7 +25,7 @@ function main() {
 		var $result = $(mainTpl);
 		var currentHash = '';
 		currentHash = hasher.getHash();
-		// console.log('current hash: ' + currentHash);
+
 		switch (currentHash) {
 			case '':
 			case 'table':
@@ -33,6 +33,7 @@ function main() {
 			break;
 			case 'graph':
 				$result.find(attachPoint).append(graph.render());
+
 			break;
 		}
 		$renderResult = $result;
@@ -54,6 +55,11 @@ function main() {
 			$(selector).append($renderResult);
 		} else {
 			$('body').append($renderResult);
+		}
+		var currentHash = hasher.getHash();
+		if(currentHash === 'graph' ) {
+			// draw svg
+			graph.drawSvg();
 		}
 		$previousDomObj = $renderResult;
 		bindEvent();

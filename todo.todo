@@ -5,8 +5,8 @@
  ✔ data api @done (16-08-05 16:04)
  ✔ router @done (16-08-05 16:04)
  ✔ many render bugs @done (16-08-05 16:04)
- ☐ responsive css
- ☐ test spec in karma
+ ✔ responsive css @done (16-08-05 18:52)
+ ✔ test spec in karma @done (16-08-06 09:58)
  ☐ try bind events
  ☐ let user select different county
  ☐ try a render graph

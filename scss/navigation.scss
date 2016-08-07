@@ -34,8 +34,10 @@
 			display: block;
 			font-size: 20px; 
 			line-height: 2em;
+			text-decoration: none;
 			transition: all 0.4s;
-			padding-left: 1.4em;
+			padding-left: 0;
+			text-align: center; 
 
 			&:hover {
 				color: white; 
@@ -73,9 +75,16 @@
 			font-size: 1.6em;
 			margin-top: 0;
 			padding-top: 0.3em;
+			text-align: center;
 		}
 		.menu-list {
 			margin-top: 0;
+		}
+		.menu-item {
+			text-align: center;
+			a {
+				padding-left: 0;
+			}
 		}
 
 	}

@@ -17,7 +17,7 @@ function table() {
 		}
 		var data = {commercials: commercials, residentials: residentials};
 		data = _.extend(data, viewHelper);
-		console.log(data);
+
 		var renderResult = tplFunc(data);
 		return renderResult;
 	}

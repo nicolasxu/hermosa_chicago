@@ -24,7 +24,7 @@
               <th class="std">Therm Std.</th>
               <th>People #</th>
               <th>Unit #</th>
-              <th>Population #</th>
+              <th class="population">Population #</th>
             </tr>
           </thead>
           <tbody>
@@ -37,7 +37,7 @@
                 <td class="std"> <%- formatFloat(res.therm_standard_deviation_2010) %> </td>
                 <td> <%- res.peoples_account %> </td>
                 <td> <%- res.total_units %> </td>
-                <td> <%- formatInt(res.total_population) %> </td>
+                <td class="population"> <%- formatInt(res.total_population) %> </td>
               </tr>
             <%  } ) %>
           </tbody>
@@ -60,7 +60,7 @@
               <th class="std">Therm Std.</th>
               <th>People #</th>
               <th>Unit #</th>
-              <th>Population #</th>
+              <th class="population">Population #</th>
             </tr>
           </thead>
           <tbody>
@@ -73,7 +73,7 @@
                 <td class="std"> <%- formatFloat(res.therm_standard_deviation_2010) %> </td>
                 <td> <%- res.peoples_account %> </td>
                 <td> <%- res.total_units %> </td>
-                <td> <%- formatInt(res.total_population) %> </td>
+                <td class="population"> <%- formatInt(res.total_population) %> </td>
               </tr>
             <%  } ) %>
           </tbody>

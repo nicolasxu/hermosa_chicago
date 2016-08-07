@@ -7,7 +7,8 @@ require('./img/favicon.ico');
 require('./img/chicago_logo.png');
 var appCache = require('./api/cache.js');
 var api = require('./api/api.js');
-// var api = require('./api/api.js');
+
+var formatData = require('./api/_formatData.js');
 
 var app = require('./routes/route.js');
 
@@ -23,6 +24,9 @@ $(document).ready(function (){
 	})
 		.then(function(residentials){
 			appCache.residentials = residentials;
+
+			appCache.commGraphData = formatData.formatGraphData(appCache.commercials);
+			appCache.residGraphData = formatData.formatGraphData(appCache.residentials);
 			console.log(appCache);
 			app.start();
 		})
