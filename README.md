@@ -19,3 +19,5 @@ Type "http://localhost:8080/" in browser
 # Test
 
 >npm test
+
+It requries **karma** installed globally
