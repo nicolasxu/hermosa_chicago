@@ -1,10 +1,10 @@
 .app-nav {
-	float: left;
+	// float: left;
+	position: fixed; 
 	height: 100vh;
 	width: 320px;
 	background-color: #28aadc;
 	color: white;
-	position: relative;
 	.logo {
 
 		position: absolute;
@@ -28,8 +28,6 @@
 	}
 	.menu-item {
 		list-style: none;
-		
-
 		a {
 			display: block;
 			font-size: 20px; 
@@ -38,12 +36,10 @@
 			transition: all 0.4s;
 			padding-left: 0;
 			text-align: center; 
-
 			&:hover {
 				color: white; 
 				text-decoration: none;
 				background-color: rgba(105, 105, 115, 0.27);
-
 			}
 		}
 	}
@@ -64,9 +60,9 @@
 
 	/* Extra Small Devices, Phones */ 
 	@media only screen and (max-width : 480px) {
+		position: relative;
 		display: block;
 		height: auto;
-		float: none;
 		width: 100%;
 		.logo {
 			display: none;
@@ -86,8 +82,5 @@
 				padding-left: 0;
 			}
 		}
-
 	}
-
-
 }

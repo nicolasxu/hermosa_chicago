@@ -1,22 +1,17 @@
 .kwh_therm {
 	display: block;
-	height: 88vh;
-	overflow: scroll;
 	width: 100%;
 	padding-right: 0;
 	padding-bottom: 1em;
-
 	th, td {
 		text-align: right; 
 	}
-
 	/* Medium Devices, Desktops */
 	@media only screen and (max-width : 992px) {
 		.std, .population {
 			display: none; 
 		}
 	}
-
 	/* Extra Small Devices, Phones */ 
 	@media only screen and (max-width : 480px) {
 		width: 100%;

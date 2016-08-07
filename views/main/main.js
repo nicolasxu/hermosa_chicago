@@ -7,20 +7,32 @@ var table = require('./table/table.js');
 var hasher = require('hasher');
 
 function main() {
+
+	/*** Private member variables ***/
+
+	// id tag for attaching the rendered result
 	var attachPoint = '#main-content';
+	// Flag to tell if the event binding is done
 	var eventBinded = false; 
+	// Hold rendered html result
 	var renderResult = '';
+	// Hold rendered result in jquery object
 	var $renderResult = '';
+	// Variable for previously rendered jquery obj, 
+	// the purpose of this variable is to prevent double rendering.
 	var $previousDomObj = '';
 
+	/*** private methods ***/
+
+	// method for binding event
 	function bindEvent(context) {
 		eventBinded = true;
 	}
+	// method for unbinding event
 	function unbindEvent() {
 		eventBinded = false; 
 	}
-
-
+	// render html and store result html in private member variable
 	function render() {
 		var $result = $(mainTpl);
 		var currentHash = '';
@@ -33,20 +45,19 @@ function main() {
 			break;
 			case 'graph':
 				$result.find(attachPoint).append(graph.render());
-
 			break;
 		}
 		$renderResult = $result;
  		return $renderResult[0].outerHTML;
-
 	}
+	// method for removing previously rendered result from DOM
 	function detach() {
 		if($ ($previousDomObj) ) {
 			$($previousDomObj).remove();
 		}
 		$previousDomObj = '';
 	}
-
+	// method for attaching rendered result to DOM
 	function attach(selector)  {
 		detach();
 		render();
@@ -63,8 +74,9 @@ function main() {
 		}
 		$previousDomObj = $renderResult;
 		bindEvent();
-
 	}
+
+	/*** public methods ***/
 
 	return {
 		attach: attach,

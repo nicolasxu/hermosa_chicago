@@ -7,7 +7,10 @@ var formatData = require('../../../api/_formatData.js');
 
 function table() {
 
+	/*** private methods ***/
+
 	function render() {
+
 		var commercials = appCache.commercials;
 		var residentials = appCache.residentials;
 		var tplFunc = _.template(tableTpl);
@@ -17,10 +20,14 @@ function table() {
 		}
 		var data = {commercials: commercials, residentials: residentials};
 		data = _.extend(data, viewHelper);
+		// make viewHelper available in underscore template
 
 		var renderResult = tplFunc(data);
 		return renderResult;
 	}
+
+	/*** public methods ***/
+
 	return {
 		render: render
 	}
