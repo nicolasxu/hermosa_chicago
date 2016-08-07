@@ -9,7 +9,7 @@
  ✔ test spec in karma @done (16-08-06 09:58)
  ☐ try bind events
  ☐ let user select different county
- ☐ try a render graph
+ ✔ try a render graph @done (16-08-07 11:26)
 
 
 
