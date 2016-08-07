@@ -21,8 +21,9 @@ module.exports = {
 	devtool: 'source-map', // enable source map
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new HtmlWebpackPlugin({template: 'index.html'}),
-		new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
+		new HtmlWebpackPlugin({template: 'index.html'})
+		// ,
+		// new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
 	], 
 	module: {
 		loaders: [
