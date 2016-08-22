@@ -5,12 +5,17 @@ require('bootstrap-loader'); // load bootstrap 3
 require('./scss/style.scss');
 require('./img/favicon.ico');
 require('./img/chicago_logo.png');
+require('./img/spiffygif_174x174.gif');
+var li = require('./views/loading_indicator/indicator.js');
+
 var appCache = require('./api/cache.js');
 var api = require('./api/api.js');
 var formatData = require('./api/_formatData.js');
 var app = require('./routes/route.js');
 
 $(document).ready(function (){
+
+	li.show();
 	// load data
 	api.hermosa.getCommercial()
 		.then(function(commercials){
@@ -21,6 +26,8 @@ $(document).ready(function (){
 			appCache.residentials = residentials;
 			appCache.commGraphData = formatData.formatGraphData(appCache.commercials);
 			appCache.residGraphData = formatData.formatGraphData(appCache.residentials);
+
+			li.hide();
 			// start app
 			app.start();
 		})
