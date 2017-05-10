@@ -1,7 +1,7 @@
 
 
 var $ = require('jquery');
-require('bootstrap-loader'); // load bootstrap 3
+//require('bootstrap-loader'); // load bootstrap 3
 require('./scss/style.scss');
 require('./img/favicon.ico');
 require('./img/chicago_logo.png');

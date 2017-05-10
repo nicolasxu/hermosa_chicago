@@ -27,18 +27,18 @@ module.exports = {
 	], 
 	module: {
 		loaders: [
-			{test: /\.scss$/, loader: 'style!css!sass'}, 
-			{test: /\.css$/, loader: 'style!css'},
-			{test: /\.(html)(\?[\s\S]+)?$/, loader: 'raw'},
+			{test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'}, 
+			{test: /\.css$/, loader: 'style-loader!css-loader'},
+			{test: /\.(html)(\?[\s\S]+)?$/, loader: 'raw-loader'},
 			{
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: "url?limit=10000" 
       },
       {
         test: /\.(ttf|eot|svg|ico)(\?[\s\S]+)?$/,
-        loader: 'file?name=[name].[ext]'
+        loader: 'file-loader?name=[name].[ext]'
       },
-      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
+      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports-loader?jQuery=jquery' },
       { test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=8192&name=[name].[ext]' } 
     ]
 	}
