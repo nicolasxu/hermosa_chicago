@@ -5,4 +5,5 @@ then
   exit 1
 fi
 git subtree push --prefix $1 origin gh-pages
+# use the following command to deploy to github page
 # sh ./deployToGithubPage.sh dist
